@@ -33,11 +33,11 @@ body{
     font-size: 25px;
     color: black;
     padding: 15px 30px;
-    outline: none;
-    border: none;
     border-radius: 5px;
     background: #fff;
+    border: solid 2px black;
     cursor: pointer;
+    margin-top: 30%;
 }
 .info_box{
     width: 540px;
