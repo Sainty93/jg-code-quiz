@@ -4,6 +4,10 @@ var buttonA = document.getElementById("answer-b");
 var buttonA = document.getElementById("answer-c");
 var buttonA = document.getElementById("answer-d");
 var startbutton = document.getElementById("start_btn");
+var timerEl = document.getElementById("timer_sec");
+var time = 60;
+var timeId;
+var timeLeft = "";
 
 startbutton.addEventListener("click", function(){
     console.log("buttonwasclicked");
@@ -38,5 +42,12 @@ var questions = [
 
 
 function startquiz(){
-    console.log("I need to write my start quiz options")
+    timeLeft = time; 
+    timeId = setInterval(starttime, 1000);
+    timerEl.textContent = time;
+
+}
+var starttime = function(){
+    time--;
+    timerEl.textContent = time;
 }

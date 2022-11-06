@@ -12,7 +12,7 @@ body{
     background: #007bff;
 }
 .start_btn,
-.info-box,
+.info_box,
 .quiz,
 .results{
     position: absolute;
@@ -21,37 +21,24 @@ body{
     transform: translate(-50%, -50%);
     box-shadow: none;
 }
-.info_box.activeInfo,
-.quiz_box.activeQuiz,
-.result_box.activeResult{
-    opacity: 6;
-    z-index: 6;
-    pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1);
-}
+
 .start_btn button{
-    font-size: 25px;
-    color: black;
-    padding: 15px 30px;
-    border-radius: 5px;
-    background: #fff;
-    border: solid 2px black;
-    cursor: pointer;
-    margin-top: 30%;
+    margin-left: 50%;
+    margin-right:auto;
+    width: 8em;
+    
 }
-.info_box{
-    width: 540px;
-    background: #fff;
-    border-radius: 5px;
-    transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
+.info_rules{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+
 }
+
 .info_box .info-title{
     height: 60px;
     width: 100%;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid rgb(8, 8, 8);
     display: flex;
     align-items: center;
     padding: 0 30px;
@@ -70,27 +57,10 @@ body{
     font-weight: 600;
     color: #007bff;
 }
-.info_box .buttons{
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 30px;
-    border-top: 1px solid lightgrey;
-}
-.info_box .buttons button{
-    margin: 0 5px;
-    height: 40px;
-    width: 100px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid #007bff;
-    transition: all 0.3s ease;
-}
+
+
+
+
 .quiz_box{
     width: 550px;
     background: #fff;
@@ -115,4 +85,9 @@ body{
 .quiz_box header .title{
     font-size: 60px;
     font-weight: 600;
+}
+#timer_sec{
+    position: fixed;
+    top: 0;
+    left: 0;
 }
