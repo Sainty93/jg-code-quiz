@@ -9,6 +9,7 @@ var time = 60;
 var timeId;
 var timeLeft = "";
 
+
 startbutton.addEventListener("click", function(){
     console.log("buttonwasclicked");
     startquiz();
