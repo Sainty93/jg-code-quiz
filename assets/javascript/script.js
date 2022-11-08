@@ -40,7 +40,9 @@ const questionHolder = document.querySelector('#question');
 const nextBtn = document.querySelector('#nextbutton');
 
 let currentQuestion = 0;
-
+if (currentQuestion === 1){
+    let currentQuestion = 2;
+}
 function renderQuestion(questionIndex) {
     questionHolder.textContent = questions[questionIndex].message;
 }
