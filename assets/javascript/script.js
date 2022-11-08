@@ -8,7 +8,7 @@ var timerEl = document.getElementById("timer_sec");
 var time = 60;
 var timeId;
 var timeLeft = "";
-
+var startQuiz = prompt("Please choose corrrect answer.",)
 
 startbutton.addEventListener("click", function(){
     console.log("buttonwasclicked");
@@ -46,9 +46,12 @@ function startquiz(){
     timeLeft = time; 
     timeId = setInterval(starttime, 1000);
     timerEl.textContent = time;
-
 }
-var starttime = function(){
+
+starttime = function(){
     time--;
     timerEl.textContent = time;
+}
+function startButton(){
+
 }
