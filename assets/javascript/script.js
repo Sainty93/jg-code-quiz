@@ -1,46 +1,20 @@
 var questionElement = document.getElementById("questions_text");
 var buttonA = document.getElementById("answer-a");
-var buttonA = document.getElementById("answer-b");
-var buttonA = document.getElementById("answer-c");
-var buttonA = document.getElementById("answer-d");
+var buttonb = document.getElementById("answer-b");
+var buttonc = document.getElementById("answer-c");
+var buttond = document.getElementById("answer-d");
 var startbutton = document.getElementById("start_btn");
 var timerEl = document.getElementById("timer_sec");
 var time = 60;
 var timeId;
 var timeLeft = "";
-var startQuiz = prompt("Please choose corrrect answer.",)
+
+
 
 startbutton.addEventListener("click", function(){
     console.log("buttonwasclicked");
     startquiz();
 })
-
-
-
-var questions = [
-    {
-        question: "What is NOT a javascript data type?",
-        choices: ["string", "boolean", "alert", "number"],
-        answer: "alert"
-    },
-    {
-        question: "What is NOT a javascript data type?",
-        choices: ["string", "boolean", "alert", "number"],
-        answer: "alert"
-    },
-    {
-        question: "What is NOT a javascript data type?",
-        choices: ["string", "boolean", "alert", "number"],
-        answer: "alert"
-    },
-    {
-        question: "What is NOT a javascript data type?",
-        choices: ["string", "boolean", "alert", "number"],
-        answer: "alert"
-    }
-]
-
-
 
 function startquiz(){
     timeLeft = time; 
@@ -55,3 +29,33 @@ starttime = function(){
 function startButton(){
 
 }
+
+const questions = [
+    { id: 1, message: 'Which is a Boolean?' },
+    { id: 2, message: 'which is an array?' },
+    { id: 3, message: 'Which is the THIS element?' },
+];
+
+const questionHolder = document.querySelector('#question');
+const nextBtn = document.querySelector('#nextbutton');
+
+let currentQuestion = 0;
+
+function renderQuestion(questionIndex) {
+    questionHolder.textContent = questions[questionIndex].message;
+}
+
+nextBtn.addEventListener('click', function() {
+    currentQuestion += 1;
+
+    if(currentQuestion == questions.length -1) {
+        nextBtn.textContent = 'submit';
+
+    }
+    renderQuestion(currentQuestion);
+});
+
+renderQuestion(0);
+
+
+
